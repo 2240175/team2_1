@@ -21,5 +21,4 @@ void audio_deinit()
 {
     // ‰¹Šy‚ð‘S‚Ä‰ð•ú
     music::clear();
-    float p = 777;
 }
