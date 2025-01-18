@@ -8,6 +8,8 @@ using namespace GameLib;
 #define SCENE_NONE      (-1)
 #define SCENE_TITLE     (0)
 #define SCENE_GAME      (1)
+#define SCENE_INFO		(2)
+#define SCENE_SCORE     (3)
 
 //  íËêî
 extern const FLOAT PI;
