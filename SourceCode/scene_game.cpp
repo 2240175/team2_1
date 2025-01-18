@@ -54,7 +54,7 @@ void game_deinit()
 //--------------------------------------
 //  ƒQ[ƒ€‚ÌXVˆ—
 //--------------------------------------
-void game_update()
+void game_update()            
 {
     switch (game_state)
     {
