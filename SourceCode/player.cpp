@@ -1,8 +1,16 @@
 #include "all.h"
+#include<iostream>
 
 int     player_state;
 
-#if 3
+//---------
+// ’e‚Ì‰Šú’l
+//---------
+float kunaiX = 1280 / 2;
+float kunaiY = -3.0;
+
+
+
 //******************************************************************************
 // TODO:03 OBJ2DŒ^‚Ì•Ï”player‚ğéŒ¾
 //------------------------------------------------------------------------------
@@ -11,7 +19,7 @@ int     player_state;
     ‰º‹L‚ÅOBJ2DŒ^‚Ì•Ï”player‚ğéŒ¾‚µ‚Ü‚µ‚å‚¤B
 */
 //******************************************************************************
-#endif
+
 //TODO_03
 struct OBJ2D player;
 
@@ -78,7 +86,7 @@ void player_update()
 //******************************************************************************
 #endif
         //TODO_07
-        sprPlayer = sprite_load(L"./Data/Images/stickman.png");
+        sprPlayer = sprite_load(L"./Data/Images/kunai1.png");
 
         ++player_state;
         /*fallthrough*/
