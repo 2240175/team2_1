@@ -3,7 +3,9 @@
 int title_state;
 int title_timer;
 
-Sprite* sprCar;
+Sprite* sprtitle;
+Sprite* sprKi;
+
 
 //--------------------------------------
 //  初期設定
@@ -21,20 +23,21 @@ void title_deinit()
 {
     music::stop(0);
 
-    safe_delete(sprCar);
+    safe_delete(sprtitle);
 }
 
 //--------------------------------------
 //  タイトルの更新処理
-//--------------------------------------
+//--------------------------------------    
 void title_update()
 {
     switch (title_state)
     {
     case 0:
         //////// 初期設定 ////////
-
-        sprCar = sprite_load(L"./Data/Images/right.png");
+        sprKi = sprite_load(L"./Data/Images/push.png");
+        sprtitle = sprite_load(L"./Data/Images/title1.jpg");
+        
 
         title_state++;
         /*fallthrough*/
@@ -72,16 +75,18 @@ void title_update()
 }
 
 //--------------------------------------
-//  タイトルの描画処理
+//  タイトルの描画処理6
 //--------------------------------------
 void title_render()
-{
-    // 画面を青で塗りつぶす
-    GameLib::clear(0.3f, 0.5f, 1.0f);
+{  
+    sprite_render(sprtitle, 0, 0);
+    sprite_render(sprKi, 0, 0);
 
-    // タイトルの文字
-    font::textOut(4, "ECC COMP", VECTOR2(100, 80), VECTOR2(2.4f, 2.4f), VECTOR4(1, 0.8f, 0, 1));
-    font::textOut(4, "Game Programming I", VECTOR2(80, 180), VECTOR2(2.0f, 2.0f), VECTOR4(0, 1, 0.6f, 1));
+  
+
+    //// タイトルの文字
+    //font::textOut(4, "ECC COMP", VECTOR2(100, 80), VECTOR2(2.4f, 2.4f), VECTOR4(1, 0.8f, 0, 1));
+    //font::textOut(4, "Game Programming I", VECTOR2(80, 180), VECTOR2(2.0f, 2.0f), VECTOR4(0, 1, 0.6f, 1));
 
     // "Push Enter Key" 点滅
     if (title_timer >> 5 & 0x01)
@@ -89,5 +94,5 @@ void title_render()
         font::textOut(4, "Push Enter Key", VECTOR2(120, 560), VECTOR2(1.4f, 1.4f));
     }
 
-    sprite_render(sprCar, 200, 200);
+
 }
