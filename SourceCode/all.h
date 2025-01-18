@@ -41,6 +41,7 @@
 #include"player.h"
 #include "scene_game.h"
 #include "scene_title.h"
+#include "Mato.h"
 
 // namespace
 using namespace GameLib;
