@@ -3,11 +3,11 @@
 
 using namespace std;
 
-
-
 //•Ï”
 int mato_state;
 int mato_timer;
+int matoX;
+int matoY;
 
 Sprite* sprMato;
 
@@ -40,7 +40,7 @@ void mato_update()
 		mato_state++;
 		break;
 
-
+	case 2:
 
 
 	
