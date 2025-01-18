@@ -88,11 +88,7 @@ void title_render()
     //font::textOut(4, "ECC COMP", VECTOR2(100, 80), VECTOR2(2.4f, 2.4f), VECTOR4(1, 0.8f, 0, 1));
     //font::textOut(4, "Game Programming I", VECTOR2(80, 180), VECTOR2(2.0f, 2.0f), VECTOR4(0, 1, 0.6f, 1));
 
-    // "Push Enter Key" “_–Å
-    if (title_timer >> 5 & 0x01)
-    {
-        font::textOut(4, "Push Enter Key", VECTOR2(120, 560), VECTOR2(1.4f, 1.4f));
-    }
+  
 
 
 }
