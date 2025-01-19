@@ -23,7 +23,7 @@ int matoY;
 float posx1;//的1のposx
 float posy1;//的1のposy
 float poskx1 = 1280/2;
-float posky1 = 800;
+float posky1 = 720;
 
 
 
@@ -101,8 +101,7 @@ void game_update()
         debug::setString("game_state:%d", game_state);
         debug::setString("game_timer:%d", game_timer);
         debug::setString("game_timer:%d", isHit);
-
-       /* std::ostringstream oss;   */                              // 文字列ストリーム
+                         
         POINT point;                                            // 位置用の変数を宣言する
         GetCursorPos(&point);                                   // スクリーン座標を取得する
         ScreenToClient(window::getHwnd(), &point);              // クライアント座標に変換する
@@ -112,7 +111,7 @@ void game_update()
         if (TRG(0) & PAD_TRG1)
         {
            
-            
+            posky1 = 780 / 2;
         }
 
 
